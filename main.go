@@ -7,7 +7,7 @@ import (
 	"github.com/googollee/go-socket.io"
 )
 
-// master branch with new chnages
+// testing branch with new chnages
 
 func main() {
 	server, err := socketio.NewServer(nil)
@@ -26,6 +26,6 @@ func main() {
 
 	http.Handle("/socket.io/", server)
 	http.Handle("/", http.FileServer(http.Dir("./public")))
-	log.Println("Serving at :5000 rapbeh...master")
+	log.Println("Serving at :5000 rapbeh...testing")
 	log.Fatal(http.ListenAndServe(":5000", nil))
 }
